@@ -12,12 +12,15 @@ services:
     volumes:
     - db_data:/var/lib/postgresql/data
   hasura:
-    image: hasura/graphql-engine:v2.6.2.debian.amd64
+    image: hasura/graphql-engine:v2.6.2.cli-migrations-v2.debian.amd64
     ports:
     - "8080:8080"
     depends_on:
     - "db"
     restart: always
+    volumes:
+      - ./hasura/migrations:/hasura-migrations
+      - ./hasura/metadata:/hasura-metadata
     environment:
       - HASURA_GRAPHQL_DATABASE_URL=postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:5432/${DB_NAME}
       - HASURA_GRAPHQL_ENABLE_CONSOLE=true
