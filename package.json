@@ -6,7 +6,11 @@
   "scripts": {
     "test": "test",
     "docker-dev": "docker-compose -f docker-compose.dev.yml up -d",
-    "docker-prod": "docker-compose -f docker-compose.yml up -d"
+    "docker-prod": "docker-compose -f docker-compose.yml up -d",
+    "create-migration": "cd hasura && ./create_migration.sh",
+    "apply-migration": "cd hasura && ./apply_migration.sh",
+    "apply-metadata": "cd hasura && ./apply_metadata.sh",
+    "hasura-console": "cd hasura && npx hasura console"
   },
   "repository": {
     "type": "git",
