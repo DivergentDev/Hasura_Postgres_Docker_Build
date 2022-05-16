@@ -1,0 +1,30 @@
+{
+  "name": "hasura-docker-boilerplate",
+  "version": "1.0.0",
+  "description": "A docker compose app that brings together Docker, Hasura, Hasura CLI and a Postgres DB",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "docker-dev": "docker-compose -f docker-compose.dev.yml up -d",
+    "docker-prod": "docker-compose -f docker-compose.yml up -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DivergentDev/Hasura_Postgres_Docker_Build.git"
+  },
+  "keywords": [
+    "hasura",
+    "docker",
+    "db",
+    "postgres"
+  ],
+  "author": "Ini Atoyebi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DivergentDev/Hasura_Postgres_Docker_Build/issues"
+  },
+  "homepage": "https://github.com/DivergentDev/Hasura_Postgres_Docker_Build#readme",
+  "devDependencies": {
+    "hasura-cli": "^2.6.1"
+  }
+}
